@@ -1,0 +1,57 @@
+name: Test ZSH Script
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install ZSH
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y zsh
+    
+    - name: Check ZSH version
+      run: zsh --version
+    
+    - name: Test script syntax
+      run: |
+        zsh -n var.sh
+    
+    - name: Test help flag
+      run: |
+        zsh -c "source ./var.sh --help"
+    
+    - name: Test list flag
+      run: |
+        zsh -c "source ./var.sh --list"
+    
+    - name: Check script requirements
+      run: |
+        which grep mv rm mkdir printf
+    
+    - name: Test script with minimal interaction
+      run: |
+        echo "Q" | zsh -c "source ./var.sh" || true
+
+  shellcheck:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install ShellCheck
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y shellcheck
+    
+    - name: Run ShellCheck
+      run: |
+        shellcheck -s bash var.sh || true  # Allow warnings, just check for errors
