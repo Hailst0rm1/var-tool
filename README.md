@@ -2,6 +2,8 @@
 
 A ZSH-based interactive tool for managing environment variables and credential sets commonly used in penetration testing workflows, particularly for OSCP+ scenarios.
 
+![Environment Variables Tool Interface](images/image.png)
+
 ## Features
 
 - **Interactive Variable Management**: Easy-to-use interface for setting and managing 11 common penetration testing variables
