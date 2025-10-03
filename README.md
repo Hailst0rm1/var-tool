@@ -34,17 +34,20 @@ A ZSH-based interactive tool for managing environment variables and credential s
 ## Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/yourusername/var-tool.git
 cd var-tool
 ```
 
 2. Make the script executable:
+
 ```bash
 chmod +x var.sh
 ```
 
 3. Source the script:
+
 ```bash
 source var.sh
 ```
@@ -54,6 +57,7 @@ source var.sh
 ### Interactive Mode
 
 Start the interactive interface:
+
 ```bash
 source var.sh
 ```
@@ -100,6 +104,7 @@ Credential sets allow you to store and quickly switch between different user cre
 ## Export Functionality
 
 The export feature creates two files in your specified `OUTDIR`:
+
 - `users.txt` - List of usernames
 - `passwords.txt` - List of passwords
 
@@ -115,6 +120,7 @@ This is useful for tools that require separate user and password files.
 ## Examples
 
 ### Setting up for a penetration test:
+
 ```bash
 # Start the tool
 source var.sh
@@ -133,6 +139,7 @@ A  # Add credential set
 ```
 
 ### Loading saved environment:
+
 ```bash
 # Source saved variables
 source var.sh -s

@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+
 - Initial release of Environment Variables Tool
 - Interactive variable management for 11 penetration testing variables
 - Credential set management with multiple authentication methods
@@ -20,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Help system and usage documentation
 
 ### Features
+
 - ZSH compatibility (version 5.0+)
 - Cross-platform Unix support
 - File permission validation
@@ -29,4 +31,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2025-10-03
 
 ### Added
+
 - Initial public release
